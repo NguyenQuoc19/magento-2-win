@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="checkout" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <move element="logo" destination="header-wrapper" before="-" />
+        <referenceBlock name="minicart" remove="false" />
+        <referenceContainer name="header.panel" remove="false" />
+        <referenceBlock name="top.search" remove="false" />
+        <referenceBlock name="catalog.compare.link" remove="false" />
+        <referenceBlock name="catalog.topnav" remove="false"/>
+        <referenceContainer name="footer-container"  remove="false"/>
+        
+        <move element="navigation.sections" destination="header.left" after="logo" />
+        <move element="header.panel.wrapper" destination="header.right" after="top.search"/>
+    </body>
+</page>
